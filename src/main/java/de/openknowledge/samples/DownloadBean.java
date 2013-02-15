@@ -39,6 +39,11 @@ public class DownloadBean implements Serializable {
   protected DownloadBean() {
   }
 
+  public void getFile(String filename) throws IOException {
+    setFilename(filename);
+    getFile();
+  }
+
   public void getFile() throws IOException {
     FacesContext faces = FacesContext.getCurrentInstance();
     HttpServletResponse response = (HttpServletResponse) faces.getExternalContext().getResponse();

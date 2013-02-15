@@ -8,9 +8,18 @@
 </h:head>
 <h:body>
   <h:form prependId="false">
+    <p>
+    prettyfaces:
     <h:outputLink value="#{request.contextPath}/download/helloworld.pdf">
-      Right Click &gt; Save As
+      Right Click &gt; Save As [works]
     </h:outputLink>
+    </p>
+    <p>
+    JSF only:
+    <h:commandLink actionListener="#{downloadBean.getFile('helloworld.pdf')}">
+      Right Click &gt; Save As [fails]
+    </h:commandLink>
+    </p>
   </h:form>
 </h:body>
 </html>
