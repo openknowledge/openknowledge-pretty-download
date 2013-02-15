@@ -1,9 +1,9 @@
-pretty-download
-===============
+# openknowledge-pretty-download
+
+### Description
 
 This short example shows how to realize a file download using prettyfaces.
 
-This is how to run the project:
-  mvn clean install tomcat7:run
+### This is how to run the project
 
-
+    mvn clean install tomcat7:run
