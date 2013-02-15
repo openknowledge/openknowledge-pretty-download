@@ -3,12 +3,10 @@
                xsi:schemaLocation="http://ocpsoft.com/prettyfaces/3.3.0
                                    		http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.0.xsd">
 
-  <url-mapping id="invoiceDownload">
-    <view-id>/emptyDownload.xhtml</view-id>
-    <pattern value="/download/file.#{invoiceDownloadController.type}"/>
-    <action>#{invoiceDownloadController.getInvoice}</action>
-    <query-param name="documentId" onPostback="false">#{invoiceDownloadController.documentId}</query-param>
-    <query-param name="filename" onPostback="false">#{invoiceDownloadController.filename}</query-param>
+  <url-mapping id="fileDownload">
+    <pattern value="/download/#{downloadBean.filename}"/>
+    <view-id value="/emptyDownload.jsf"/>
+    <action>#{downloadBean.getFile}</action>
   </url-mapping>
 
 </pretty-config>
